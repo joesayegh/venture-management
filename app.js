@@ -49,6 +49,22 @@ var scroll = new SmoothScroll('a[href*="#"]', {
 });
 
 ///////////////////////////////////////
+// HERO
+///////////////////////////////////////
+
+// FIND THE FULL HEIGHT OF THE VIEWPORT
+var fullHeight = window.innerHeight;
+// FIND THE HEIGHT OF THE HEADER
+var headerHeight = document.querySelector(".header-nav-wrapper").clientHeight;
+// console.log(headerHeight);
+
+// TARGET THE SLIDER
+var swiperWrapper = document.getElementById("swiperWrapper");
+
+// APPLY THE FULL HEIGHT TO THE HERO SLIDER
+swiperWrapper.style.height = fullHeight - headerHeight + "px";
+
+///////////////////////////////////////
 // AOS
 ///////////////////////////////////////
 // INITIALIZE
