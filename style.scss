@@ -555,6 +555,8 @@ nav.breadcrumb {
 
 	li {
 		display: inline;
+		letter-spacing: 3px;
+		text-transform: uppercase;
 	}
 
 	li + li::before {
