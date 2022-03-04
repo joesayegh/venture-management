@@ -59,6 +59,7 @@ h4,
 h5,
 h6 {
 	overflow-wrap: break-word;
+	margin: 0 0 1rem 0;
 }
 
 #root,
@@ -73,7 +74,7 @@ h6 {
 body {
 	// font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 	font-family: "Montserrat", sans-serif;
-	font-size: 0.85rem;
+	font-size: 0.88rem;
 	font-weight: 300;
 	padding: 0;
 	margin: 0 auto;
@@ -89,16 +90,10 @@ body {
 	}
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h2 {
 	font-weight: 600;
 	text-transform: uppercase;
 	letter-spacing: 2.5px;
-	margin: 0 0 1rem 0;
 }
 
 h3 {
@@ -110,9 +105,12 @@ strong {
 	font-weight: bold;
 }
 
+ol,
+ul,
 p {
+	font-size: 0.88rem;
+	font-weight: 300;
 	line-height: 1.8;
-	margin: 0 0 10px 0;
 }
 
 a {
@@ -163,10 +161,12 @@ hr {
 	margin-left: auto;
 }
 
-.container-960 {
-	max-width: 800px;
-	margin-right: auto;
-	margin-left: auto;
+.max-width-mid {
+	max-width: 768px;
+}
+
+.max-width-small {
+	max-width: 640px;
 }
 
 // FILTER COLOR - USED TO TURN SVG'S WHITE
@@ -537,6 +537,53 @@ a.btn {
 }
 
 ///////////////////////////////////////
+// BREADCRUMBS
+///////////////////////////////////////
+
+nav.breadcrumb {
+	padding: 20px 0;
+
+	@media screen and (min-width: 768px) {
+		padding: 30px 0;
+	}
+
+	ol {
+		margin: 0;
+		padding-left: 0;
+		list-style: none;
+	}
+
+	li {
+		display: inline;
+	}
+
+	li + li::before {
+		display: inline-block;
+		margin: 0 0.25em;
+		transform: rotate(15deg);
+		border-right: 0.1em solid currentColor;
+		height: 0.8em;
+		content: "";
+	}
+
+	[aria-current="page"] {
+		font-weight: 700;
+		text-decoration: none;
+	}
+}
+
+///////////////////////////////////////
+// PAGE HEADER
+///////////////////////////////////////
+.page-header {
+	padding: 0 0 20px 0;
+
+	@media screen and (min-width: 768px) {
+		padding: 0 0 30px 0;
+	}
+}
+
+///////////////////////////////////////
 // SWIPER
 ///////////////////////////////////////
 .swiper {
@@ -603,7 +650,38 @@ a.btn {
 
 .intro {
 	&-wrapper {
-		padding: 80px 0;
+		padding: 6rem 0;
+	}
+
+	&-flex {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+
+		@media screen and (min-width: 1024px) {
+			flex-direction: row;
+			justify-content: flex-end;
+		}
+
+		&-content {
+			max-width: 640px;
+			margin: 0 auto;
+
+			@media screen and (min-width: 1024px) {
+				flex: 1;
+			}
+		}
+	}
+
+	h1 {
+		font-size: 1.2rem;
+		font-weight: 500;
+		line-height: 1.6;
+		margin-bottom: 1rem;
+	}
+
+	a {
+		font-weight: bold;
 	}
 }
 
@@ -683,5 +761,15 @@ a.btn {
 
 	&-copyright {
 		padding: 20px 0;
+		font-size: 0.75rem;
+
+		@media screen and (min-width: 768px) {
+			font-size: 0.85rem;
+		}
 	}
 }
+
+// DEBUG
+// * {
+// 	outline: 1px solid red;
+// }
