@@ -76,7 +76,11 @@ AOS.init();
 // HERO
 const swiperHero = new Swiper(".swiper-hero", {
 	// Optional parameters
-	// direction: "vertical",
+	// speed: 1000,
+	// effect: "fade",
+	// fadeEffect: {
+	// 	crossFade: true,
+	// },
 	loop: true,
 
 	// If we need pagination
