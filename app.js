@@ -58,11 +58,14 @@ var fullHeight = window.innerHeight;
 var headerHeight = document.querySelector(".header-nav-wrapper").clientHeight;
 // console.log(headerHeight);
 
-// TARGET THE SLIDER
+// TARGET THE HERO SLIDER
 var swiperWrapper = document.getElementById("swiperWrapper");
 
-// APPLY THE FULL HEIGHT TO THE HERO SLIDER
-swiperWrapper.style.height = fullHeight - headerHeight + "px";
+// IF SWIPER WRAPPER IS ON PAGE
+if (swiperWrapper) {
+	// APPLY THE FULL HEIGHT TO THE HERO SLIDER
+	swiperWrapper.style.height = fullHeight - headerHeight + "px";
+}
 
 ///////////////////////////////////////
 // AOS
