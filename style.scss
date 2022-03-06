@@ -716,7 +716,7 @@ nav.breadcrumb {
 			margin-bottom: 1rem;
 			background-color: var(--bg-alt);
 			// APPLYING THIS WILL REMOVE AOS TRANSITION EFFECT
-			// transition: 0.2s ease-in-out !important;
+			transition: all 400ms;
 
 			&:hover,
 			&:focus {
