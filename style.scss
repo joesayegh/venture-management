@@ -715,12 +715,12 @@ nav.breadcrumb {
 			display: block;
 			margin-bottom: 1rem;
 			background-color: var(--bg-alt);
-			transition: 0.2s ease-in-out !important;
+			// APPLYING THIS WILL REMOVE AOS TRANSITION EFFECT
+			// transition: 0.2s ease-in-out !important;
 
 			&:hover,
 			&:focus {
 				background-color: var(--bg-alt-trans);
-				transition: 0.2s ease-in-out !important;
 			}
 
 			// SET THIS TO DISPLAY NONE TO REMOVE THE RED LINE EFFECT
