@@ -152,6 +152,28 @@ const swiperTrustedBy = new Swiper(".swiper-trusted-by", {
 	},
 });
 
+// PROJECT
+const swiperProject = new Swiper(".swiper-project", {
+	autoHeight: true,
+	loop: true,
+	spaceBetween: 10,
+	slidesPerView: 4,
+	freeMode: true,
+	watchSlidesProgress: true,
+});
+const swiperProjectThumbs = new Swiper(".swiper-project-thumbs", {
+	autoHeight: true,
+	loop: true,
+	spaceBetween: 10,
+	navigation: {
+		nextEl: ".swiper-button-next",
+		prevEl: ".swiper-button-prev",
+	},
+	thumbs: {
+		swiper: swiperProject,
+	},
+});
+
 ///////////////////////////////////////
 // YEAR IN THE FOOTER
 ///////////////////////////////////////

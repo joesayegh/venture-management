@@ -761,7 +761,35 @@ nav.breadcrumb {
 }
 
 ///////////////////////////////////////
-// TRUSTED BY
+// PROJECT GALLERY - SWIPER
+///////////////////////////////////////
+.swiper-project-thumbs {
+	height: 80%;
+	width: 100%;
+}
+
+.swiper-project {
+	height: 20%;
+	box-sizing: border-box;
+	padding: 10px 0;
+}
+
+.swiper-project .swiper-slide {
+	width: 25%;
+	height: 100%;
+	opacity: 0.4;
+}
+
+.swiper-project .swiper-slide-thumb-active {
+	opacity: 1;
+}
+
+.swiper-thumbs {
+	margin-top: 10px;
+}
+
+///////////////////////////////////////
+// TRUSTED BY - SWIPER
 ///////////////////////////////////////
 .trusted-by {
 	&-wrapper {
