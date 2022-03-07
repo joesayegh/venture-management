@@ -67,6 +67,22 @@ h6 {
 	isolation: isolate;
 }
 
+// WAI - WEB ACCESSIBILITY INITIATIVE
+.wai {
+	border: 0 !important;
+	border-color: transparent !important;
+	background: transparent !important;
+	position: absolute !important;
+	height: 1px !important;
+	width: 1px !important;
+	margin: -1px !important;
+	padding: 0 !important;
+	overflow: hidden !important;
+	clip-path: inset(50%) !important;
+	clip: rect(1px, 1px, 1px, 1px) !important;
+	white-space: nowrap !important;
+}
+
 ///////////////////////////////////////
 // SITE DEFAULTS
 ///////////////////////////////////////
@@ -466,7 +482,16 @@ a.btn {
 	}
 }
 
-a.nav-toggle {
+button.nav-toggle {
+	// DEFAULT BUTTON OVERRIDES
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+
 	position: absolute;
 	z-index: 999;
 	top: 50%;
@@ -476,11 +501,6 @@ a.nav-toggle {
 	-webkit-transform: translate(-50%, -50%);
 	transform: translate(-50%, -50%);
 
-	// OVERRIDE - REMOVE THE RED LINE EFFECT
-	&:before {
-		display: none;
-	}
-
 	.nav-text,
 	.active .nav-text {
 		transition: all 0s;
@@ -488,9 +508,7 @@ a.nav-toggle {
 
 	// BURGER
 	.bar {
-		// background-color: #fff;
 		background-color: var(--text);
-		// background-color: var(--bg);
 		display: block;
 		height: 1px;
 		margin-top: 0;
