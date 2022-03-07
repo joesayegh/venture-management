@@ -128,18 +128,17 @@ a {
 		}
 	}
 
+	// RED LINE EFFECT
 	&:before {
-		@media screen and (min-width: 768px) {
-			content: "";
-			position: absolute;
-			bottom: -2px;
-			visibility: hidden;
-			width: 100%;
-			max-width: 0%;
-			height: 2px;
-			transition: 0.2s ease-in-out;
-			background-color: var(--accent);
-		}
+		content: "";
+		position: absolute;
+		bottom: -2px;
+		visibility: hidden;
+		width: 100%;
+		max-width: 0%;
+		height: 2px;
+		transition: 0.2s ease-in-out;
+		background-color: var(--accent);
 	}
 }
 
@@ -359,6 +358,11 @@ a.btn {
 				@media screen and (min-width: 768px) {
 					background-color: transparent;
 				}
+
+				// OVERRIDE - REMOVE THE RED LINE EFFECT
+				a:before {
+					display: none;
+				}
 			}
 		}
 
@@ -460,7 +464,7 @@ a.btn {
 	}
 }
 
-.nav-toggle {
+a.nav-toggle {
 	position: absolute;
 	z-index: 999;
 	top: 50%;
@@ -469,6 +473,11 @@ a.btn {
 	cursor: pointer;
 	-webkit-transform: translate(-50%, -50%);
 	transform: translate(-50%, -50%);
+
+	// OVERRIDE - REMOVE THE RED LINE EFFECT
+	&:before {
+		display: none;
+	}
 
 	.nav-text,
 	.active .nav-text {
@@ -724,7 +733,7 @@ nav.breadcrumb {
 				background-color: var(--bg-alt-trans);
 			}
 
-			// SET THIS TO DISPLAY NONE TO REMOVE THE RED LINE EFFECT
+			// OVERRIDE - REMOVE THE RED LINE EFFECT
 			&:before {
 				display: none;
 			}
