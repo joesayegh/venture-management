@@ -346,6 +346,11 @@ a.btn {
 				fill: var(--text);
 				// fill: var(--bg);
 			}
+
+			// OVERRIDE - REMOVE THE RED LINE EFFECT
+			a:before {
+				display: none;
+			}
 		}
 
 		// .header-nav-wrapper .primary-nav-wrapper
